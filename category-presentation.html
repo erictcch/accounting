@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentation - Accounting Intelligence</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                    <line x1="10" y1="9" x2="18" y2="9"/>
+                    <line x1="10" y1="13" x2="14" y2="13"/>
+                    <line x1="10" y1="17" x2="18" y2="17"/>
+                </svg>
+                <span>Accounting Intel</span>
+            </a>
+            <nav class="main-nav">
+                <a href="index.html">Latest</a>
+                <a href="#" id="categories-toggle">Categories</a>
+                <a href="#" id="sources-toggle">Sources</a>
+                <div class="search-container">
+                    <input type="search" id="search-input" placeholder="Search standards, memos, updates..." autocomplete="off">
+                    <div id="search-results" class="search-results"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="container">
+        
+<div class="page-header">
+    <h1>Presentation</h1>
+    <p class="subtitle">1 items</p>
+</div>
+
+<div class="filters">
+    <div class="filter-group">
+        <label>Source</label>
+        <select id="source-filter">
+            <option value="">All Sources</option>
+            
+            
+            <option value="kpmg.com">kpmg.com</option>
+            
+        </select>
+    </div>
+    <div class="filter-group">
+        <label>Sort</label>
+        <select id="sort-filter">
+            <option value="date-desc">Newest First</option>
+            <option value="date-asc">Oldest First</option>
+            <option value="title">Title A-Z</option>
+        </select>
+    </div>
+</div>
+
+<div id="items-grid" class="items-grid">
+    
+    <article class="item-card" data-source="kpmg.com">
+        <div class="item-meta">
+            <span class="item-date">Unknown</span>
+        </div>
+        <h2 class="item-title">
+            <a href="upcoming-ifrs-accounting-standard.html.html">IFRS 18, the upcoming IFRS Accounting Standard: what you need to know</a>
+        </h2>
+        <p class="item-source">kpmg.com</p>
+        
+        <p class="item-summary">IFRS 18, published April 2024, replaces IAS 1 Presentation of Financial Statements. It introduces significant changes to the structure of the income statement and related disclosures to improve comparability of financial performance. The standard does not alter recognition or measurement requirement...</p>
+        
+        
+        <ul class="item-changes">
+            
+            <li>Income and expenses classified into three defined categories: operating, investing, and financing.</li>
+            
+            <li>Two new mandatory subtotals: 'Operating profit or loss' and 'Profit or loss before financing and income tax'.</li>
+            
+            <li>Disclosure requirements for management-defined performance measures (MPMs) — subtotals used in public communications to convey management's view of performance.</li>
+            
+        </ul>
+        
+        <div class="item-tags">
+            
+            <span class="tag">IFRS 18</span>
+            
+            <span class="tag">IAS 1 replacement</span>
+            
+            <span class="tag">Presentation of Financial Statements</span>
+            
+            <span class="tag">Income statement structure</span>
+            
+            <span class="tag">Management-defined performance measures (MPM)</span>
+            
+        </div>
+    </article>
+    
+</div>
+
+    </main>
+    
+    <footer class="site-footer">
+        <div class="container">
+            <p>Last updated:  |  items | Built with Accounting Intelligence Pipeline</p>
+        </div>
+    </footer>
+    
+    <script src="search.js"></script>
+    <script>
+        // Load search index
+        fetch('search-index.json')
+            .then(r => r.json())
+            .then(data => { window.searchIndex = data; })
+            .catch(() => {});
+    </script>
+    
+</body>
+</html>
